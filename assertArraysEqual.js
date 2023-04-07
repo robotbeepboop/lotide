@@ -1,4 +1,4 @@
-const eqArrays = function(arr1, arr2) {
+const assertEqualArrays = function(arr1, arr2) {
   //check if arrays are identical, empty, or of different lengths
   if (arr1 === arr2) {
     console.log(true);
@@ -26,3 +26,4 @@ const assertEqual = function(actual, expected) {
 };
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+module.exports = assertEqualArrays;
