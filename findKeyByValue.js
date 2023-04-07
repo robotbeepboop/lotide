@@ -1,9 +1,4 @@
-const assertEqual = function(actual, expected) {
-  console.assert(actual === expected, `${actual} !==  ${expected}`);
-  if (actual === expected) {
-    console.log(`Assertion passed: ${actual} === ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //takes in a value and an object
 const findKeyByValue = function(obj, val) {
