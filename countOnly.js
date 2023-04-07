@@ -1,9 +1,4 @@
-const assertEqual = function(actual, expected) {
-  console.assert(actual === expected, `${actual} !==  ${expected}`);
-  if (actual === expected) {
-    console.log(`Assertion passed: ${actual} === ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //given an array and object, returns object counting everything in the input object
 //only truthy values
