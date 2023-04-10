@@ -1,21 +1,5 @@
 const assertEqual = require('./assertEqual');
-
-const eqArrays = function(arr1, arr2) {
-  //check if arrays are identical, empty, or of different lengths
-  if (arr1 === arr2) {
-    return true;
-  } else if (arr1 == null || arr2 == null) {
-    return false;
-  } else if (arr1.length !== arr2.length) {
-    return false;
-  } 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -42,3 +26,5 @@ const eqObjects = function(object1, object2) {
     return undefined
   }
 };
+
+module.exports = eqObjects;
