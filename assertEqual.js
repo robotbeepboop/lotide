@@ -11,3 +11,5 @@ const assertEqual = function(actual, expected) {
     console.log(`Assertion passed: ${actual} === ${expected}`);
   }
 };
+
+module.exports = assertEqual;
