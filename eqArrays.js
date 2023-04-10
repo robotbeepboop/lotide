@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 const eqArrays = function(arr1, arr2) {
   //check if arrays are identical, empty, or of different lengths
   if (arr1 === arr2) {
@@ -15,6 +17,4 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertEqual = require('./assertEqual');
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+module.exports = eqArrays;
