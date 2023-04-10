@@ -1,28 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  //check if arrays are identical, empty, or of different lengths
-  if (arr1 === arr2) {
-    return true;
-  } else if (arr1 == null || arr2 == null) {
-    return false;
-  } else if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      } else {
-        return true;
-      }
-    }
-  }
-};
-
-const assertEqual = function(actual, expected) {
-  console.assert(actual === expected, `${actual} !==  ${expected}`);
-  if (actual === expected) {
-    console.log(`Assertion passed: ${actual} === ${expected}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
 let source = [];
 let itemsToRemove = [];
@@ -37,3 +14,5 @@ const without = function(source, itemsToRemove) {
   }
   return source;
 }
+
+module.exports = without;
